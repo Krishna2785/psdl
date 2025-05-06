@@ -1,0 +1,32 @@
+Program 1 
+#include <xc.h>
+#include<stdio.h>
+#include<pic18f4550.h>
+
+void main(void) {
+    int temp, i;
+    int source1[]={0x21, 0x22, 0x23, 0x24, 0x25};
+    int dest[] = {0x00, 0x00, 0x00, 0x00, 0x00};
+    for (i=0; i<=5; i++){
+        dest[i]= source1[i];
+    }
+}
+
+
+Program 2 
+#include <xc.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+
+void main(void) {
+    int temp,i;
+    int source1[] = {0x21, 0x22, 0x23, 0x24, 0x25};
+    int dest[] = {0x99, 0x98, 0x97, 0x96, 0x95};
+    
+    for(i= 0; i<=4; i++){
+        temp = source1[i];
+        source1[i] = dest[i];
+        dest[i] = temp;
+    }
+}
